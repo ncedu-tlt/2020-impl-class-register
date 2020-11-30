@@ -20,12 +20,8 @@ public class MyFileReader {
         return stringBuilder;
     }
 
-    public int countWords() throws IOException {
-        int countWords = 0;
-        String line;
-        while ((line = bufferedReader.readLine()) != null) {
-
-        }
-        return countWords;
+    public int countWords() {
+        String[] countWords = stringBuilder.toString().split(" ");
+        return countWords.length;
     }
 }

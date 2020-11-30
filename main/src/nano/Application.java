@@ -13,5 +13,7 @@ public class Application {
         }
 
         System.out.println(myFileReader.getStringBuilder());
+
+        System.out.println("Words = " + myFileReader.countWords());
     }
 }
