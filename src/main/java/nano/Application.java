@@ -17,6 +17,7 @@ public class Application {
         System.out.println("Punctuation marks: " + myFileReader.getCountPunctuationMark());
         System.out.println("Lower case: " + myFileReader.getCountLowerCase());
         System.out.println("Upper case: " + myFileReader.getCountUpperCase());
+        System.out.println("The longest word(characters): " + myFileReader.getLongestWord());
 
     }
 }

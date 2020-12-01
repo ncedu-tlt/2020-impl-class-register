@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 
 public class MyFileReader {
 
+    private final static Pattern WORD = Pattern.compile("[\\s(]\\w+");
+
     private StringBuilder phrase;
 
     public void bufferedFile(String nameFile) throws IOException {
@@ -25,8 +27,7 @@ public class MyFileReader {
     public int getCountWords() {
         int count = 0;
 
-        Pattern pattern = Pattern.compile("[\\s(]\\w+");
-        Matcher matcher = pattern.matcher(phrase);
+        Matcher matcher = WORD.matcher(phrase);
 
         while (matcher.find()) {
             count++;
@@ -73,6 +74,29 @@ public class MyFileReader {
 
         while (matcher.find()) {
             count++;
+        }
+
+        return count;
+    }
+
+    public int getLongestWord() {
+        int count = 0;
+
+        Pattern pattern = Pattern.compile("^\\w+");
+        Matcher matcher = pattern.matcher(phrase);
+
+        while (matcher.find()) {
+            char[] chars = phrase.substring(matcher.start(), matcher.end()).toCharArray();
+            count = chars.length;
+        }
+
+        matcher = WORD.matcher(phrase);
+
+        while (matcher.find()) {
+            char[] chars = phrase.substring(matcher.start(), matcher.end()).toCharArray();
+            if (count < chars.length - 1) {
+                count = chars.length - 1;
+            }
         }
 
         return count;
