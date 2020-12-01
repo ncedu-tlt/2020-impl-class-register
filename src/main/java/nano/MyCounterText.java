@@ -1,38 +1,19 @@
 package nano;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ReadCountWriteFile {
+public class MyCounterText {
 
-    private final static Pattern WORD = Pattern.compile("[a-zA-Z]+-?[a-zA-z]*");
+    private final static Pattern WORD = Pattern.compile("[a-zA-Z]+-?[a-zA-Z]*");
 
     private StringBuilder text;
 
-    public ReadCountWriteFile(String nameFile) {
-        try {
-            readFile(nameFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public MyCounterText(StringBuilder text) {
+        this.text = text;
     }
 
-    public void readFile(String nameFile) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(nameFile));
-        text = new StringBuilder();
-
-        String line;
-        while ((line = bufferedReader.readLine()) != null) {
-            text.append(line).append("\n");
-        }
-    }
-
-    public StringBuilder getPhrase() {
+    public StringBuilder getText() {
         return text;
     }
 
@@ -126,10 +107,10 @@ public class ReadCountWriteFile {
         while (matcher.find()) {
             int countUpper = 0;
             int countLower = 0;
-            char[] characters;
-            characters = text.substring(matcher.start(), matcher.end()).toCharArray();
+            char[] chars;
+            chars = text.substring(matcher.start(), matcher.end()).toCharArray();
 
-            for (Character character : characters) {
+            for (Character character : chars) {
                 if (character.toString().matches("[A-Z]")) {
                     countUpper++;
                 }
@@ -144,5 +125,34 @@ public class ReadCountWriteFile {
         }
 
         return count;
+    }
+
+    public int getCountPalindromes() {
+        int count = 0;
+
+        Matcher matcher = WORD.matcher(text);
+
+        Pattern pattern = Pattern.compile("[a-zA-Z]");
+
+        while (matcher.find()) {
+            String word = text.substring(matcher.start(), matcher.end()).toLowerCase();
+            String reversed = reverse(word);
+            Matcher matcher1 = pattern.matcher(word);
+            if (!matcher1.matches()) {
+                if (word.equals(reversed)) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    private String reverse(String word) {
+        StringBuilder reversed = new StringBuilder();
+        for (int i = word.length(); i > 0 ; i--) {
+            reversed.append(word.charAt(i - 1));
+        }
+        return reversed.toString();
     }
 }

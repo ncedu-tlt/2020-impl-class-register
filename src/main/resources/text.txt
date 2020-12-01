@@ -29,3 +29,4 @@ A study conducted in 2010 predicted that the twenty percent of IT organizations
 would own zero on-premise ownership. This, proves the popularity of cloud-based
 tools over the physically installed tools. The same is valid for the cloud-based testing
 too.
+Tenet.
