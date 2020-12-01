@@ -1,16 +1,9 @@
 package nano;
 
-import java.io.IOException;
-
 public class Application {
 
     public static void main(String[] args) {
-        ReadCountWriteFile reader = new ReadCountWriteFile();
-        try {
-            reader.readFile("src/main/resources/text.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ReadCountWriteFile reader = new ReadCountWriteFile("src/main/resources/text.txt");
 
         System.out.println("Phrase:\n" + reader.getPhrase());
         System.out.println("Words: " + reader.getCountWords());

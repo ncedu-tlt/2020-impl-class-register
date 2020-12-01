@@ -10,6 +10,14 @@ public class ReadCountWriteFile {
 
     private StringBuilder phrase;
 
+    public ReadCountWriteFile(String nameFile) {
+        try {
+            readFile(nameFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void readFile(String nameFile) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(nameFile));
         phrase = new StringBuilder();
