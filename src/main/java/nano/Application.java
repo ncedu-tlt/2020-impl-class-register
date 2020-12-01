@@ -17,5 +17,11 @@ public class Application {
         System.out.println("Numbers less 100: " + counterText.getCountNumbersLessHundred());
         System.out.println("Word when upper case more lower case: " + counterText.getCountWordUpperCaseMoreLowerCase());
         System.out.println("Palindromes: " + counterText.getCountPalindromes());
+
+        MyChangeText changeText = new MyChangeText(readWriteFile.getText());
+
+        changeText.replacingOWithZero();
+
+        readWriteFile.writeFile(changeText.getText().toString());
     }
 }

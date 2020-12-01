@@ -1,16 +1,14 @@
 package nano;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class MyReadWriteFile {
 
     private StringBuilder text;
 
-    public MyReadWriteFile(String pathFromContentRoot) {
+    public MyReadWriteFile(String pathname) {
         try {
-            readFile(pathFromContentRoot);
+            readFile(pathname);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -27,6 +25,19 @@ public class MyReadWriteFile {
         String line;
         while ((line = bufferedReader.readLine()) != null) {
             text.append(line).append("\n");
+        }
+    }
+
+    public void writeFile(String data) {
+        File file = new File("src/main/resources/new_text.txt");
+        FileWriter fileWriter;
+        try {
+            fileWriter = new FileWriter(file);
+            fileWriter.write(data);
+            fileWriter.close();
+            System.out.println("\n" + file.getName() + " write success and save.");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

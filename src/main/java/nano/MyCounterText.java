@@ -69,8 +69,9 @@ public class MyCounterText {
 
         Matcher matcher = WORD.matcher(text);
 
+        char[] chars;
         while (matcher.find()) {
-            char[] chars = text.substring(matcher.start(), matcher.end()).toCharArray();
+            chars = text.substring(matcher.start(), matcher.end()).toCharArray();
             if (count < chars.length) {
                 count = chars.length;
             }
@@ -85,8 +86,9 @@ public class MyCounterText {
         Pattern pattern = Pattern.compile("\\d+");
         Matcher matcher = pattern.matcher(text);
 
+        int num;
         while (matcher.find()) {
-            int num = Integer.parseInt(text.substring(matcher.start(), matcher.end()));
+            num = Integer.parseInt(text.substring(matcher.start(), matcher.end()));
             if (num < 100) {
                 count++;
             }
@@ -100,10 +102,10 @@ public class MyCounterText {
 
         Matcher matcher = WORD.matcher(text);
 
+        int countUpper = 0;
+        int countLower = 0;
+        char[] chars;
         while (matcher.find()) {
-            int countUpper = 0;
-            int countLower = 0;
-            char[] chars;
             chars = text.substring(matcher.start(), matcher.end()).toCharArray();
 
             for (Character character : chars) {
@@ -129,11 +131,14 @@ public class MyCounterText {
         Matcher matcher = WORD.matcher(text);
 
         Pattern pattern = Pattern.compile("[a-zA-Z]");
+        Matcher matcher1;
 
+        String word;
+        String reversed;
         while (matcher.find()) {
-            String word = text.substring(matcher.start(), matcher.end()).toLowerCase();
-            String reversed = reverse(word);
-            Matcher matcher1 = pattern.matcher(word);
+            word = text.substring(matcher.start(), matcher.end()).toLowerCase();
+            reversed = reverse(word);
+            matcher1 = pattern.matcher(word);
             if (!matcher1.matches()) {
                 if (word.equals(reversed)) {
                     count++;
