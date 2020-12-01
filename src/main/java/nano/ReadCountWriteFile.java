@@ -4,13 +4,13 @@ import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MyFileReader {
+public class ReadCountWriteFile {
 
     private final static Pattern WORD = Pattern.compile("[\\s(]\\w+");
 
     private StringBuilder phrase;
 
-    public void bufferedFile(String nameFile) throws IOException {
+    public void readFile(String nameFile) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(nameFile));
         phrase = new StringBuilder();
 

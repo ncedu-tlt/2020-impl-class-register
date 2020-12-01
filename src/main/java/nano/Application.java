@@ -5,19 +5,19 @@ import java.io.IOException;
 public class Application {
 
     public static void main(String[] args) {
-        MyFileReader myFileReader = new MyFileReader();
+        ReadCountWriteFile reader = new ReadCountWriteFile();
         try {
-            myFileReader.bufferedFile("src/main/resources/text.txt");
+            reader.readFile("src/main/resources/text.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Phrase:\n" + myFileReader.getPhrase());
-        System.out.println("Words: " + myFileReader.getCountWords());
-        System.out.println("Punctuation marks: " + myFileReader.getCountPunctuationMark());
-        System.out.println("Lower case: " + myFileReader.getCountLowerCase());
-        System.out.println("Upper case: " + myFileReader.getCountUpperCase());
-        System.out.println("The longest word(characters): " + myFileReader.getLongestWord());
+        System.out.println("Phrase:\n" + reader.getPhrase());
+        System.out.println("Words: " + reader.getCountWords());
+        System.out.println("Punctuation marks: " + reader.getCountPunctuationMark());
+        System.out.println("Lower case: " + reader.getCountLowerCase());
+        System.out.println("Upper case: " + reader.getCountUpperCase());
+        System.out.println("The longest word: " + reader.getLongestWord() + " characters");
 
     }
 }
