@@ -13,7 +13,7 @@ public class MyFileReader {
         phrase = new StringBuilder();
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-            phrase.append(line).append(" ");
+            phrase.append(line).append("\n");
         }
     }
 
@@ -22,12 +22,20 @@ public class MyFileReader {
     }
 
     public int getCountWords() {
-        String[] countWords = phrase.toString().split(" ");
-        return countWords.length;
+        int countWords = 0;
+        Pattern pattern = Pattern.compile("[\\s(]\\w+");
+        Matcher matcher = pattern.matcher(phrase);
+        while (matcher.find()) {
+            countWords++;
+        }
+        if (countWords != 0) {
+            countWords++;
+        }
+        return countWords;
     }
 
     public int getCountPunctuationMark() {
-        Pattern pattern = Pattern.compile("[,.!?:;'\\-]");
+        Pattern pattern = Pattern.compile("[,.!?():;'\\-]");
         Matcher matcher = pattern.matcher(phrase);
         int countPunctuationMark = 0;
         while (matcher.find()) {

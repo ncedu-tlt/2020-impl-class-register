@@ -1,4 +1,14 @@
-I don't know what you are talking about;
-Maybe?
-Yes!
-No,: -me.
+Cloud users adopt the cloud computing services by utilizing the storage,
+computational and network resources available in the data centre. Cloud offers three
+important services in the form of Software as a Service (SaaS), Platform as a Service
+(PaaS) and Infrastructure as a Service (IaaS). The Data centres cater the demand
+of unlimited resources made by cloud users on pay per use basis with the help of
+virtualization. In virtualization, Virtual Machines (VMs) are created and allocated
+on top of the Physical Machines (PMs) in the form of computing instances of the PM.
+To speed up the overall operations of application, parallel execution of workloads is
+performed by VMs. In dynamic environment, the processing speed of virtual
+machines vary from one PM to another due to the unpredictable workload arrival and
+its allocation. This results in either overutilization or underutilization of VMs that
+consequences load imbalance of data centre. The scheduling of the workload on
+an appropriate virtual machine is an essential assignment to maintain stability and
+avoid poor system performance.

@@ -12,7 +12,7 @@ public class Application {
             e.printStackTrace();
         }
 
-        System.out.println("Phrase: \"" + myFileReader.getPhrase() + "\"");
+        System.out.println("Phrase:\n" + myFileReader.getPhrase());
 
         System.out.println("Words: " + myFileReader.getCountWords());
 
