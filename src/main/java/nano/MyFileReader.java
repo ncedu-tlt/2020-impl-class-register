@@ -35,7 +35,7 @@ public class MyFileReader {
     }
 
     public int getCountPunctuationMark() {
-        Pattern pattern = Pattern.compile("[,.!?():;'\\-]");
+        Pattern pattern = Pattern.compile("[,.!?():;\\-]");
         Matcher matcher = pattern.matcher(phrase);
         int countPunctuationMark = 0;
         while (matcher.find()) {
