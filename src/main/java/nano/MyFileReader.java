@@ -11,6 +11,7 @@ public class MyFileReader {
     public void bufferedFile(String nameFile) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(nameFile));
         phrase = new StringBuilder();
+
         String line;
         while ((line = bufferedReader.readLine()) != null) {
             phrase.append(line).append("\n");
@@ -22,25 +23,58 @@ public class MyFileReader {
     }
 
     public int getCountWords() {
-        int countWords = 0;
+        int count = 0;
+
         Pattern pattern = Pattern.compile("[\\s(]\\w+");
         Matcher matcher = pattern.matcher(phrase);
+
         while (matcher.find()) {
-            countWords++;
+            count++;
         }
-        if (countWords != 0) {
-            countWords++;
+
+        if (count != 0) {
+            count++;
         }
-        return countWords;
+
+        return count;
     }
 
     public int getCountPunctuationMark() {
+        int count = 0;
+
         Pattern pattern = Pattern.compile("[,.!?():;\\-]");
         Matcher matcher = pattern.matcher(phrase);
-        int countPunctuationMark = 0;
+
         while (matcher.find()) {
-            countPunctuationMark++;
+            count++;
         }
-        return countPunctuationMark;
+
+        return count;
+    }
+
+    public int getCountLowerCase() {
+        int count = 0;
+
+        Pattern pattern = Pattern.compile("[a-z]");
+        Matcher matcher = pattern.matcher(phrase);
+
+        while (matcher.find()) {
+            count++;
+        }
+
+        return count;
+    }
+
+    public int getCountUpperCase() {
+        int count = 0;
+
+        Pattern pattern = Pattern.compile("[A-Z]");
+        Matcher matcher = pattern.matcher(phrase);
+
+        while (matcher.find()) {
+            count++;
+        }
+
+        return count;
     }
 }

@@ -13,9 +13,10 @@ public class Application {
         }
 
         System.out.println("Phrase:\n" + myFileReader.getPhrase());
-
         System.out.println("Words: " + myFileReader.getCountWords());
-
         System.out.println("Punctuation marks: " + myFileReader.getCountPunctuationMark());
+        System.out.println("Lower case: " + myFileReader.getCountLowerCase());
+        System.out.println("Upper case: " + myFileReader.getCountUpperCase());
+
     }
 }
