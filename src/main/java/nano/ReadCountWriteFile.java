@@ -1,13 +1,16 @@
 package nano;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ReadCountWriteFile {
 
-    private final static Pattern WORD = Pattern.compile("[\\s(]\\w+");
+    private final static Pattern WORD = Pattern.compile("[a-zA-Z]+-?[a-zA-z]*");
 
     private StringBuilder text;
 
@@ -42,17 +45,13 @@ public class ReadCountWriteFile {
             count++;
         }
 
-        if (count != 0) {
-            count++;
-        }
-
         return count;
     }
 
     public int getCountPunctuationMark() {
         int count = 0;
 
-        Pattern pattern = Pattern.compile("[,.!?():;\\-]");
+        Pattern pattern = Pattern.compile("[,.!?():;-]");
         Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
@@ -91,20 +90,12 @@ public class ReadCountWriteFile {
     public int getCountLongestWord() {
         int count = 0;
 
-        Pattern pattern = Pattern.compile("^\\w+");
-        Matcher matcher = pattern.matcher(text);
+        Matcher matcher = WORD.matcher(text);
 
         while (matcher.find()) {
             char[] chars = text.substring(matcher.start(), matcher.end()).toCharArray();
-            count = chars.length;
-        }
-
-        matcher = WORD.matcher(text);
-
-        while (matcher.find()) {
-            char[] chars = text.substring(matcher.start(), matcher.end()).toCharArray();
-            if (count < chars.length - 1) {
-                count = chars.length - 1;
+            if (count < chars.length) {
+                count = chars.length;
             }
         }
 
@@ -114,12 +105,40 @@ public class ReadCountWriteFile {
     public int getCountNumbersLessHundred() {
         int count = 0;
 
-        Pattern pattern = Pattern.compile("\\d+\\d*");
+        Pattern pattern = Pattern.compile("\\d+");
         Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
             int num = Integer.parseInt(text.substring(matcher.start(), matcher.end()));
             if (num < 100) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public int getCountWordUpperCaseMoreLowerCase() {
+        int count = 0;
+
+        Matcher matcher = WORD.matcher(text);
+
+        while (matcher.find()) {
+            int countUpper = 0;
+            int countLower = 0;
+            char[] characters;
+            characters = text.substring(matcher.start(), matcher.end()).toCharArray();
+
+            for (Character character : characters) {
+                if (character.toString().matches("[A-Z]")) {
+                    countUpper++;
+                }
+                if (character.toString().matches("[a-z]")) {
+                    countLower++;
+                }
+            }
+
+            if (countUpper > countLower) {
                 count++;
             }
         }

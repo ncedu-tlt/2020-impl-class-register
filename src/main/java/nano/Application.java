@@ -12,5 +12,6 @@ public class Application {
         System.out.println("Upper case: " + reader.getCountUpperCase());
         System.out.println("The longest word: " + reader.getCountLongestWord() + " characters");
         System.out.println("Numbers less 100: " + reader.getCountNumbersLessHundred());
+        System.out.println("Word when upper case more lower case: " + reader.getCountWordUpperCaseMoreLowerCase());
     }
 }
