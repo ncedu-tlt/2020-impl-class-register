@@ -1,6 +1,7 @@
 package nano;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -8,7 +9,7 @@ public class ReadCountWriteFile {
 
     private final static Pattern WORD = Pattern.compile("[\\s(]\\w+");
 
-    private StringBuilder phrase;
+    private StringBuilder text;
 
     public ReadCountWriteFile(String nameFile) {
         try {
@@ -20,22 +21,22 @@ public class ReadCountWriteFile {
 
     public void readFile(String nameFile) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(nameFile));
-        phrase = new StringBuilder();
+        text = new StringBuilder();
 
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-            phrase.append(line).append("\n");
+            text.append(line).append("\n");
         }
     }
 
     public StringBuilder getPhrase() {
-        return phrase;
+        return text;
     }
 
     public int getCountWords() {
         int count = 0;
 
-        Matcher matcher = WORD.matcher(phrase);
+        Matcher matcher = WORD.matcher(text);
 
         while (matcher.find()) {
             count++;
@@ -52,7 +53,7 @@ public class ReadCountWriteFile {
         int count = 0;
 
         Pattern pattern = Pattern.compile("[,.!?():;\\-]");
-        Matcher matcher = pattern.matcher(phrase);
+        Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
             count++;
@@ -65,7 +66,7 @@ public class ReadCountWriteFile {
         int count = 0;
 
         Pattern pattern = Pattern.compile("[a-z]");
-        Matcher matcher = pattern.matcher(phrase);
+        Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
             count++;
@@ -78,7 +79,7 @@ public class ReadCountWriteFile {
         int count = 0;
 
         Pattern pattern = Pattern.compile("[A-Z]");
-        Matcher matcher = pattern.matcher(phrase);
+        Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
             count++;
@@ -87,23 +88,39 @@ public class ReadCountWriteFile {
         return count;
     }
 
-    public int getLongestWord() {
+    public int getCountLongestWord() {
         int count = 0;
 
         Pattern pattern = Pattern.compile("^\\w+");
-        Matcher matcher = pattern.matcher(phrase);
+        Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
-            char[] chars = phrase.substring(matcher.start(), matcher.end()).toCharArray();
+            char[] chars = text.substring(matcher.start(), matcher.end()).toCharArray();
             count = chars.length;
         }
 
-        matcher = WORD.matcher(phrase);
+        matcher = WORD.matcher(text);
 
         while (matcher.find()) {
-            char[] chars = phrase.substring(matcher.start(), matcher.end()).toCharArray();
+            char[] chars = text.substring(matcher.start(), matcher.end()).toCharArray();
             if (count < chars.length - 1) {
                 count = chars.length - 1;
+            }
+        }
+
+        return count;
+    }
+
+    public int getCountNumbersLessHundred() {
+        int count = 0;
+
+        Pattern pattern = Pattern.compile("\\d+\\d*");
+        Matcher matcher = pattern.matcher(text);
+
+        while (matcher.find()) {
+            int num = Integer.parseInt(text.substring(matcher.start(), matcher.end()));
+            if (num < 100) {
+                count++;
             }
         }
 
