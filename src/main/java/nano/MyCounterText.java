@@ -7,14 +7,10 @@ public class MyCounterText {
 
     private final static Pattern WORD = Pattern.compile("[a-zA-Z]+-?[a-zA-Z]*");
 
-    private StringBuilder text;
+    private final StringBuilder text;
 
     public MyCounterText(StringBuilder text) {
         this.text = text;
-    }
-
-    public StringBuilder getText() {
-        return text;
     }
 
     public int getCountWords() {

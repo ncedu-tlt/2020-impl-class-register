@@ -5,9 +5,10 @@ public class Application {
     public static void main(String[] args) {
         MyReadWriteFile readWriteFile = new MyReadWriteFile("src/main/resources/text.txt");
 
+        System.out.println("Text:\n" + readWriteFile.getText());
+
         MyCounterText counterText = new MyCounterText(readWriteFile.getText());
 
-        System.out.println("Text:\n" + counterText.getText());
         System.out.println("Words: " + counterText.getCountWords());
         System.out.println("Punctuation marks: " + counterText.getCountPunctuationMark());
         System.out.println("Lower case: " + counterText.getCountLowerCase());
