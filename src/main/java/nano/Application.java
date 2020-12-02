@@ -22,6 +22,8 @@ public class Application {
 
         changeText.replacingOWithZero();
         changeText.replacingNumbersWithWords();
+        changeText.replacingConsonantMoreOneWithUpperCase();
+        changeText.deleteVowelMoreOne();
 
         readWriteFile.writeFile(changeText.getText().toString());
     }

@@ -51,4 +51,28 @@ public class MyChangeText {
             matcher = pattern.matcher(text);
         }
     }
+
+    public void replacingConsonantMoreOneWithUpperCase() {
+        String consonantMoreOne = "[b-df-hj-np-tv-xzB-DF-HJ-NP-TV-XZ]{2,}";
+
+        Pattern pattern = Pattern.compile(consonantMoreOne);
+        Matcher matcher = pattern.matcher(text);
+
+        while (matcher.find()) {
+            text.replace(matcher.start(), matcher.end(),
+                    text.substring(matcher.start(), matcher.end()).toUpperCase());
+        }
+    }
+
+    public void deleteVowelMoreOne() {
+        String vowelMoreOne = "[aeiouyAEIOUY]{2,}";
+
+        Pattern pattern = Pattern.compile(vowelMoreOne);
+        Matcher matcher = pattern.matcher(text);
+
+        while (matcher.find()) {
+            text.delete(matcher.start(), matcher.end());
+            matcher = pattern.matcher(text);
+        }
+    }
 }
