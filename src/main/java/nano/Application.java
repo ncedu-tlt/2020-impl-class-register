@@ -21,6 +21,7 @@ public class Application {
         MyChangeText changeText = new MyChangeText(readWriteFile.getText());
 
         changeText.replacingOWithZero();
+        changeText.replacingNumbersWithWords();
 
         readWriteFile.writeFile(changeText.getText().toString());
     }

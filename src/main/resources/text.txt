@@ -1,4 +1,4 @@
-Cloud computing is the combination of already existig technologies that perform
+1997. Cloud computing is the combination of already existig technologies that perform
 many functions with the virtualized resources. As the cloud model presented in
 Fig. 1. illustrates, the platform and applications are built upon the infrastructure
 provided on cloud. Cloud based technologies have become very popular in the

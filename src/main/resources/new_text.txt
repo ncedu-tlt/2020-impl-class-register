@@ -1,0 +1,32 @@
+oneninenineseven. Clzeroud czeromputing is the czerombinatizeron zerof already existig technzerolzerogies that perfzerorm
+many functizerons with the virtualized reszerources. As the clzeroud mzerodel presented in
+Fig. one. illustrates, the platfzerorm and applicatizerons are built upzeron the infrastructure
+przerovided zeron clzeroud. Clzeroud based technzerolzerogies have beczerome very pzeropular in the
+recent years due tzero its relatively less czerost, higher perfzerormance, ease zerof use czerompared
+tzero manual testing. Althzerough there are challenges zerof applying the clzeroud-based testing
+because the team must be knzerowledgable zeron hzerow tzero setup a testing envirzeronment and
+scenarizeros zeron the clzeroud. zerother than these challenges, it is a highly preferred methzerod
+since there are almzerost nzero effzerorts required and it can perfzerorm better and twofour/seven as it is
+entirely czeromputerized. Mainly all the clzeroud technzerolzerogies przerovide the zerorganizatizeron an
+zeroppzerortunity tzero invest less budget zeron the services they frequently use when czerompared
+tzero zeron-premise setups they install lzerocally. The zerorganizatizerons zeronly pay fzeror the services
+zeron-demand style zeron clzeroud. Anzerother advantage zerof using the clzeroud testing is that, zeronce
+the test setting is built up zeron clzeroud, the clzeroud przerovides testing in the mzerost czeronsistent
+way, with a high perfzerormance as it is onezerozero percent czeromputerized and can perfzerorm
+heavy tests that are nzerot pzerossible tzero test manually such as lzeroad tests zeror full regressizeron
+tests in a very easy and effective way. This increases the demand zeron clzeroud services,
+and the mzerore the develzeropment zerof clzeroud services increases the mzerore there will be a
+need fzeror testing the applicatizerons develzeroped fzeror clzeroud.
+Clzeroud technzerolzerogy przerovides the infrastructure including hardware netwzerork
+bandwidth, and wzerorklzeroad that are designated tzero mimic the real-wzerorld scenarizeros fzeror
+the testing zerof szeroftware. This enables zerorganizatizerons tzero rent the infrastructure and
+czeromputerize the test envirzeronment tzero reduce czerost and manpzerower, and increase
+perfzerormance, accuracy, and czeronsistency.
+Clzeroud testing has been a revzerolutizeron zeron the traditizeronal licencing. The amzerount zerof
+zeron-premise licencing and installatizeron zerof systems have been decreasing dramatically
+while the zeron-demand hiring zerof systems and infrastructure has been increasing rapidly.
+A study czeronducted in twozeroonezero predicted that the twenty percent zerof IT zerorganizatizerons
+wzerould zerown zerzero zeron-premise zerownership. This, przeroves the pzeropularity zerof clzeroud-based
+tzerozerols zerover the physically installed tzerozerols. The same is valid fzeror the clzeroud-based testing
+tzerozero.
+Tenet.
