@@ -3,32 +3,23 @@ package nano;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-public class MyChangeText {
+public class ChangeText {
 
-    private final StringBuilder text;
+    private Matcher matcher;
 
-    public MyChangeText(StringBuilder text) {
-        this.text = text;
-    }
-
-    public StringBuilder getText() {
-        return text;
-    }
-
-    public void replacingOWithZero() {
-        Pattern pattern = Pattern.compile("[oO]");
-        Matcher matcher = pattern.matcher(text);
+    public StringBuilder replacingOWithZero(StringBuilder text) {
+        matcher = Patterns.LETTER_O.matcher(text);
 
         while (matcher.find()) {
             text.replace(matcher.start(), matcher.end(), "0");
         }
+
+        return text;
     }
 
-    public void replacingNumbersWithWords() {
-        Pattern pattern = Pattern.compile("\\d");
-        Matcher matcher = pattern.matcher(text);
+    public StringBuilder replacingNumbersWithWords(StringBuilder text) {
+        matcher = Patterns.NUMBER.matcher(text);
 
         Map<String, String> mapNums = new HashMap<>();
         mapNums.put("0", "zero");
@@ -48,31 +39,31 @@ public class MyChangeText {
             if (mapNums.containsKey(key)) {
                 text.replace(matcher.start(), matcher.end(), mapNums.get(key));
             }
-            matcher = pattern.matcher(text);
+            matcher = Patterns.NUMBER.matcher(text);
         }
+
+        return text;
     }
 
-    public void replacingConsonantMoreOneWithUpperCase() {
-        String consonantMoreOne = "[b-df-hj-np-tv-xzB-DF-HJ-NP-TV-XZ]{2,}";
-
-        Pattern pattern = Pattern.compile(consonantMoreOne);
-        Matcher matcher = pattern.matcher(text);
+    public StringBuilder replacingConsonantMoreOneWithUpperCase(StringBuilder text) {
+        matcher = Patterns.CONSONANT_MORE_ONE.matcher(text);
 
         while (matcher.find()) {
             text.replace(matcher.start(), matcher.end(),
                     text.substring(matcher.start(), matcher.end()).toUpperCase());
         }
+
+        return text;
     }
 
-    public void deleteVowelMoreOne() {
-        String vowelMoreOne = "[aeiouyAEIOUY]{2,}";
-
-        Pattern pattern = Pattern.compile(vowelMoreOne);
-        Matcher matcher = pattern.matcher(text);
+    public StringBuilder deleteVowelMoreOne(StringBuilder text) {
+        matcher = Patterns.VOWEL_MORE_ONE.matcher(text);
 
         while (matcher.find()) {
             text.delete(matcher.start(), matcher.end());
-            matcher = pattern.matcher(text);
+            matcher = Patterns.VOWEL_MORE_ONE.matcher(text);
         }
+
+        return text;
     }
 }

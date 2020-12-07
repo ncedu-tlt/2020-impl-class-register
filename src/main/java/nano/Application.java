@@ -1,13 +1,30 @@
 package nano;
 
+import java.io.IOException;
+
 public class Application {
 
+    private static StringBuilder text;
+
     public static void main(String[] args) {
-        MyReadWriteFile readWriteFile = new MyReadWriteFile("src/main/resources/text.txt");
+        readFile();
+        countText();
+        changeTextAndWrite();
+    }
 
-        System.out.println("Text:\n" + readWriteFile.getText());
+    private static void readFile() {
+        try {
+            text = ReadWriteFile.readFile("src/main/resources/text.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        MyCounterText counterText = new MyCounterText(readWriteFile.getText());
+        System.out.println("Text:\n" + text);
+    }
+
+    private static void countText() {
+        assert text != null;
+        CounterText counterText = new CounterText(text);
 
         System.out.println("Words: " + counterText.getCountWords());
         System.out.println("Punctuation marks: " + counterText.getCountPunctuationMark());
@@ -17,14 +34,16 @@ public class Application {
         System.out.println("Numbers less 100: " + counterText.getCountNumbersLessHundred());
         System.out.println("Word when upper case more lower case: " + counterText.getCountWordUpperCaseMoreLowerCase());
         System.out.println("Palindromes: " + counterText.getCountPalindromes());
+    }
 
-        MyChangeText changeText = new MyChangeText(readWriteFile.getText());
+    private static void changeTextAndWrite() {
+        ChangeText changeText = new ChangeText();
 
-        changeText.replacingOWithZero();
-        changeText.replacingNumbersWithWords();
-        changeText.replacingConsonantMoreOneWithUpperCase();
-        changeText.deleteVowelMoreOne();
+        text = changeText.replacingOWithZero(text);
+        text = changeText.replacingNumbersWithWords(text);
+        text = changeText.replacingConsonantMoreOneWithUpperCase(text);
+        text = changeText.deleteVowelMoreOne(text);
 
-        readWriteFile.writeFile(changeText.getText().toString());
+        ReadWriteFile.writeFile(text.toString());
     }
 }
