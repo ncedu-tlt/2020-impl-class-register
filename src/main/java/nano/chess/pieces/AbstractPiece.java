@@ -1,14 +1,15 @@
-package nano.chess.figures;
+package nano.chess.pieces;
 
-import java.util.List;
+import nano.chess.pieces.enums.Color;
+import nano.chess.pieces.interfaces.ChessPiece;
 
-public abstract class AbstractFigure {
+public abstract class AbstractPiece implements ChessPiece {
 
     private final Color color;
     private int x;
     private int y;
 
-    public AbstractFigure(Color color, int x, int y) {
+    public AbstractPiece(Color color, int x, int y) {
         this.color = color;
         this.x = x;
         this.y = y;
@@ -38,8 +39,4 @@ public abstract class AbstractFigure {
     public String toString() {
         return color.name().charAt(0) + getClass().getSimpleName().substring(0, 2);
     }
-
-    public abstract boolean move(int x, int y, AbstractFigure cell);
-
-    public abstract String listOfAllowedMoves(int x, int y, AbstractFigure cell);
 }
