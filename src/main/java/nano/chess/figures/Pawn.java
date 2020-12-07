@@ -1,5 +1,8 @@
 package nano.chess.figures;
 
+import nano.chess.Board;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pawn extends AbstractFigure {
@@ -34,7 +37,15 @@ public class Pawn extends AbstractFigure {
     }
 
     @Override
-    public List<String> listOfAllowedMoves() {
-        return null;
+    public String listOfAllowedMoves(int x, int y, AbstractFigure cell) {
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < Board.CELLS.length; i++) {
+            for (int j = 0; j < Board.CELLS[i].length; j++) {
+                if (move(i + 1, i + 2, Board.CELLS[i][j])) {
+                    list.add(toString() + " (" + x + ", " + y + ");");
+                }
+            }
+        }
+        return list;
     }
 }

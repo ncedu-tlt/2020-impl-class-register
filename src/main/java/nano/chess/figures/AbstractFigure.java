@@ -41,5 +41,5 @@ public abstract class AbstractFigure {
 
     public abstract boolean move(int x, int y, AbstractFigure cell);
 
-    public abstract List<String> listOfAllowedMoves();
+    public abstract String listOfAllowedMoves(int x, int y, AbstractFigure cell);
 }

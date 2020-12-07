@@ -14,7 +14,7 @@ public class Queen extends AbstractFigure {
     }
 
     @Override
-    public List<String> listOfAllowedMoves() {
+    public String listOfAllowedMoves(int x, int y, AbstractFigure cell) {
         return null;
     }
 }

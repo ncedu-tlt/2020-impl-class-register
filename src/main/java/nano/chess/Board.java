@@ -4,31 +4,30 @@ import nano.chess.figures.*;
 
 public class Board {
     
-    private final static AbstractFigure[][] CELLS = new AbstractFigure[8][8];
+    public final static AbstractFigure[][] CELLS = new AbstractFigure[8][8];
 
     public Board() {
         addFiguresOnBoard();
     }
 
     public void printBoard() {
-        for (int y = 0; y < 8; y++) {
-            for (int x = 0; x < 8; x++) {
+        char[] letters = new char[] {'a', 'b', 's', 'd', 'e', 'f', 'g', 'h'};
+        for (int y = CELLS.length - 1; y >= 0; y--) {
+            System.out.print(letters[y] + " ");
+            for (int x = 0; x < CELLS[y].length; x++) {
                 if (CELLS[x][y] == null) {
-                    empty();
+                    System.out.print("[ ] ");
                 } else {
-                    busy(x, y);
+                    System.out.print(CELLS[x][y] + " ");
                 }
             }
             System.out.println();
         }
-    }
-
-    private void empty() {
-        System.out.print("[ ] ");
-    }
-
-    private void busy(int x, int y) {
-        System.out.print(CELLS[x][y] + " ");
+        System.out.print("   ");
+        for (int i = 1; i <= CELLS.length; i++) {
+            System.out.print(i + "   ");
+        }
+        System.out.println();
     }
 
     private void addFiguresOnBoard() {
@@ -72,6 +71,20 @@ public class Board {
             }
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Лишняя фигура");
+        }
+    }
+
+    public void printListOfAllowedMoves() {
+        for (int y = 0; y < CELLS.length; y++) {
+            for (int x = 0; x < CELLS[y].length; x++) {
+                for (int i = 0; i < CELLS.length; i++) {
+                    for (int j = 0; j < CELLS[i].length; j++) {
+                        if (CELLS[x][y].move(i + 1, j + 1, CELLS[i][j])) {
+                            System.out.println(CELLS[x][y].listOfAllowedMoves(i + 1, j + 1, CELLS[i][j]));
+                        }
+                    }
+                }
+            }
         }
     }
 }
