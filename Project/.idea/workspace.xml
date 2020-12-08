@@ -25,8 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fb2df76-4fe3-4ce5-9cd0-123f1164a2e3" name="Default Changelist" comment="Add gitignore">
-      <change afterPath="$PROJECT_DIR$/src/com.netcracker.oleg/Main.java" afterDir="false" />
+    <list default="true" id="5fb2df76-4fe3-4ce5-9cd0-123f1164a2e3" name="Default Changelist" comment="Add cars, race, and race method, realized randomized class with SecureRandom class it gives us more true random.&#10;CicleBarrier">
+      <change afterPath="$PROJECT_DIR$/src/com/netcracker/oleg/h3/Race.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/netcracker/oleg/h3/cars/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/netcracker/oleg/h3/random/Randomizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/netcracker/oleg/h3/road/Road.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com.netcracker.oleg/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,14 +60,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1kxN8BZo74mhT3B3Dd7A75XBAXp" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -72,11 +81,17 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.netcracker.oleg" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/source" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.netcracker.oleg" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Race">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.netcracker.oleg.h2.chess.main.Game" />
       <module name="Project" />
@@ -90,22 +105,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.netcracker.oleg.Main" />
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.netcracker.oleg.cars.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Race" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.netcracker.oleg.h3.Race" />
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.netcracker.oleg.h3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Game" />
+        <item itemvalue="Application.Race" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Game" />
         <item itemvalue="Application.Game" />
         <item itemvalue="Application.Game" />
@@ -124,6 +153,10 @@
       <workItem from="1607167840605" duration="77000" />
       <workItem from="1607238685907" duration="2811000" />
       <workItem from="1607241564716" duration="389000" />
+      <workItem from="1607254621400" duration="3891000" />
+      <workItem from="1607421301252" duration="2880000" />
+      <workItem from="1607429430748" duration="4271000" />
+      <workItem from="1607437094612" duration="4155000" />
     </task>
     <task id="LOCAL-00001" summary="Realized method makeMove, and some changes in pieces.">
       <created>1607019683597</created>
@@ -146,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607240495750</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add cars, race, and main method.">
+      <created>1607258603803</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607258603803</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +221,7 @@
     <MESSAGE value="Created a check for non-existent coordinates and modified the method makeMove()." />
     <MESSAGE value="Add gitignore" />
     <MESSAGE value="Test to add new branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test to add new branch" />
+    <MESSAGE value="Add cars, race, and main method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add cars, race, and main method." />
   </component>
 </project>
