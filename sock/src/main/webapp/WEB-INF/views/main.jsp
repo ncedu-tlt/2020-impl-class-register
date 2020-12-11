@@ -87,7 +87,7 @@
                 msgBlock.appendChild(fromBlock);
                 msgBlock.appendChild(textBlock);
 
-                this.chatMessageContainer.appendChild(msgBlock);
+                this.chatMessageContainer.prepend(msgBlock);
 
             },
 
@@ -102,12 +102,12 @@
             },
 
             openSocket() {
-                this.ws = new WebSocket("ws://localhost:8080/sock/chat");
+                this.name = this.nameInput.value;
+                this.ws = new WebSocket("ws://localhost:8080/sock/chat/" + this.name);
                 this.ws.onopen = () => this.onOpenSock();
                 this.ws.onmessage = (e) => this.onMessage(JSON.parse(e.data));
                 this.ws.onclose = () => this.onClose();
 
-                this.name = this.nameInput.value;
                 this.startbox.style.display = "none";
                 this.chatbox.style.display = "block";
             }
@@ -125,13 +125,14 @@
     </div>
 
     <div class="chatbox">
-        <div class="messages">
-
-        </div>
         <textarea class="msg">
 
         </textarea>
-        <input type="button" value="Нажми меня" id="elem">
+        <div class="messages">
+
+        </div>
+
+<%--        <input type="button" value="Нажми меня" id="elem">--%>
       </div>
 </body>
 </html>
