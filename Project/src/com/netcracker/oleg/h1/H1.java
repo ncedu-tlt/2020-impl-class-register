@@ -23,9 +23,12 @@ public class H1 {
         int numbers = 0;
         int punct = 0;
         int pals = 0;
+        int upp = 0;
+        int low = 0;
+        int upMoreLow = 0;
 
         //Задание 1
-        doFirstEx(text, longestWord, words, numbers, punct, pals, result); //все подсчёты в тексте
+        doFirstEx(text, longestWord, words, numbers, punct, pals, result, upp, low, upMoreLow); //все подсчёты в тексте
 
         //Задание 2
         text = changeAlpToZero(text);
@@ -34,7 +37,8 @@ public class H1 {
         text = removeAllVowels2xAndMore(text);
 
         //Запись в файл
-        PrintWriter pw = new PrintWriter(new File("Resources/h1/Text.txt"));
+        PrintWriter pw = new PrintWriter(new File("Resources/h1/Result.txt"));
+        pw.print("");
         pw.println(text); //обработанный текс
         pw.print(result); //итоговые начения подсчёта
         pw.close();
@@ -42,16 +46,16 @@ public class H1 {
 
     //    -----------------------------------------------------
 //static methods...
-    private static void doFirstEx(String text, int longestWord, int words, int numbers, int punct, int pals, StringBuilder result) {
+    private static void doFirstEx(String text, int longestWord, int words,
+                                  int numbers, int punct, int pals, StringBuilder result,
+                                  int up, int low, int upMoreLow) {
         Pattern p = Pattern.compile("\\p{Punct}");
         Pattern w = Pattern.compile("[A-Za-z]+");
         Pattern n = Pattern.compile("-?\\d+");
 
         String[] strings = text.split("\\s+"); // массив слов, цыфр, пунктуации
-        showUpAndLowCase(text, result); //вывод всех строчных и прописных, а также больше ли прописных или нет
 
         for (String s : strings) {
-
             Matcher m = n.matcher(s);
             if (m.find()) { //если число меньше 100
                 try{
@@ -65,6 +69,9 @@ public class H1 {
                 punct++;
             } else if (w.matcher(s).find()) { //если слово
                 words++;
+                int Z = countZ(s); up += Z;
+                int P = countP(s); low += P;
+                upMoreLow =+ (int)(Z > P ? 1 : 0);
                 pals = countPal(s, pals);
                 longestWord = countLong(s, longestWord);
             }
@@ -74,6 +81,9 @@ public class H1 {
         result.append("Amount of numm < 100: ").append(numbers).append("\n");
         result.append("Amount of letters in the longes word:").append(longestWord).append("\n");
         result.append("Amount of palindromes:").append(pals).append("\n");
+        result.append("Amount of Upper: ").append(up).append("\n");
+        result.append("Amount of Lower: ").append(low).append("\n");
+        result.append("Upper more then lower:").append(upMoreLow).append("\n");
     }
 
 //    -------------------------------------------------------
@@ -82,20 +92,22 @@ public class H1 {
         return Math.max(s.length(), longestWord);
     }
 
-    private static void showUpAndLowCase(String s, StringBuilder result) {
-        Matcher matcherZ = Pattern.compile("[A-Z]+").matcher(s);
-        Matcher matcherP = Pattern.compile("[a-z]+").matcher(s);
-        int z = 0, p = 0;
-
+    private static int countZ(String s) {
+        Matcher matcherZ = Pattern.compile("[A-Z]").matcher(s);
+        int z = 0;
         while (matcherZ.find()) {
             z += matcherZ.end() - matcherZ.start();
         }
+        return z;
+    }
+
+    private static int countP(String s) {
+        Matcher matcherP = Pattern.compile("[a-z]").matcher(s);
+        int p = 0;
         while (matcherP.find()) {
             p += matcherP.end() - matcherP.start();
         }
-        result.append("Amount of Upper: ").append(z).append("\n");
-        result.append("Amount of Lower: ").append(p).append("\n");
-        result.append("Upper more then lower:").append(z > p).append("\n");
+        return p;
     }
 
     private static int countPal(String s, int pals) {

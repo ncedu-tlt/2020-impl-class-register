@@ -1,0 +1,14 @@
+DDDD VVV FDFDFD faSDRGFDSa fafafafa!
+HeLL0 my dr FRND! H0w are y0u?
+It's -one00.
+one TWo THR fr five six seven GHT nine
+one0 one00 one000 one0000
+aMBReLLa 
+Amount of words: 12
+Amount of punct: 5
+Amount of numm < 100: 11
+Amount of letters in the longes word:10
+Amount of palindromes:4
+Amount of Upper: 6
+Amount of Lower: 49
+Upper more then lower:1

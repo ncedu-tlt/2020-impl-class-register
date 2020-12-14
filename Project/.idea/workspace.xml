@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4e29141-0d17-4074-bf7f-621047e4b4c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/h1/Text.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Project/com/netcracker/oleg/h1/H1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/netcracker/oleg/h1/H1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/h1/Result.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sock/src/com/java/netcracker/spring/aop/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sock/src/com/java/netcracker/spring/aop/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sock/src/com/java/netcracker/spring/aop/Myconfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/src/main/java/com/example/springtest/demo/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/src/main/java/com/example/springtest/demo/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/src/main/java/com/example/springtest/demo/MyConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/src/main/java/com/example/springtest/demo/aspects/LogingAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com.netcracker.oleg/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project/com/netcracker/oleg/h1/H1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/com/netcracker/oleg/h1/H1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/netcracker/oleg/h1/H1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/netcracker/oleg/h1/H1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resources/h1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Application.H1">
@@ -71,17 +73,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.H1" />
@@ -99,6 +90,7 @@
       <updated>1607356052194</updated>
       <workItem from="1607356052199" duration="2371000" />
       <workItem from="1607412677064" duration="348000" />
+      <workItem from="1607958567119" duration="1979000" />
     </task>
     <servers />
   </component>
@@ -119,5 +111,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/netcracker/oleg/h1/H1.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
