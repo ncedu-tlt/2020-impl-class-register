@@ -3,6 +3,7 @@ package com.pozhenskii.spring.mvc_hibernate_aop.dao;
 import com.pozhenskii.spring.mvc_hibernate_aop.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -39,5 +40,16 @@ public class EmployeeDAOImpl implements EmployeeDAO { //будет подклю�
         Session session = sessionFactory.getCurrentSession();
         Employee employee = session.get(Employee.class, id); //достаём из базы по id
         return employee;
+    }
+
+    @Override
+    public void deleteEmployee(int id) {
+        Session session = sessionFactory.getCurrentSession();
+
+        Query<Employee> query = session.createQuery("delete from Employee " +
+                "where id =:employeeId"); //вместо employeeId мы пропишем парамметр!
+        query.setParameter("employeeId", id);
+
+        query.executeUpdate(); //как и delete, так и update!
     }
 }

@@ -15,7 +15,12 @@
 
         <c:forEach var="emp" items="${allEmps}">
 
+            <%-- Это link - переход с параметром --%>
             <c:url var="updateButton" value="/updateInfo"> <%-- url с айдишником элемента--%>
+                <c:param name="empId" value="${emp.id}"/>
+            </c:url>
+
+            <c:url var="deleteButton" value="/deleteEmployee"> <%-- url с айдишником элемента--%>
                 <c:param name="empId" value="${emp.id}"/>
             </c:url>
 
@@ -27,7 +32,10 @@
                 <td>
                     <%-- при нажатии на кнопу мы будем переходить по ссылке в метод --%>
                     <input type="button" value="Update"
-                           onclick="window.location.href = '${updateButton}'"/>
+                           onclick="window.location.href = '${updateButton}'"/> <%-- ссылка на Link --%>
+
+                    <input type="button" value="Delete"
+                           onclick="window.location.href = '${deleteButton}'"/> <%-- ссылка на Link --%>
                 </td>
             </tr>
 
