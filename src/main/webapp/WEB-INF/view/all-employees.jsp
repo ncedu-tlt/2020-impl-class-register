@@ -20,5 +20,11 @@
             </tr>
         </c:forEach>
     </table>
-    </body>
+    <br>
+<%--  при нажатии на кнопу будет вызваться метод addNewEmployee --%>
+<input type="button" value="Add"
+   onclick="window.location.href = 'addNewEmployee'">
+
+
+</body>
 </html>
