@@ -18,7 +18,8 @@ public class EmployeeDAOImpl implements EmployeeDAO { //будет подклю�
     public List<Employee> getAllEmployees() {
         Session session = sessionFactory.getCurrentSession();
         List<Employee> allEmployees = session
-                .createQuery("from Employee", Employee.class)
+                //notAnError.exe :)  этот form не ошибка!!!, но пытается ей быть!
+                .createQuery("from Employee", Employee.class) //получаем всех
                 .getResultList();
 
         return allEmployees;
@@ -27,6 +28,16 @@ public class EmployeeDAOImpl implements EmployeeDAO { //будет подклю�
     @Override
     public void saveEmployee(Employee employee) {
         Session session = sessionFactory.getCurrentSession();
-        session.save(employee);
+
+        //добавляем или добавляем в базу в базу
+        // выбераем действие по id, если >1, то up, если 0, то sa
+        session.saveOrUpdate(employee);
+    }
+
+    @Override
+    public Employee getEmployee(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        Employee employee = session.get(Employee.class, id); //достаём из базы по id
+        return employee;
     }
 }

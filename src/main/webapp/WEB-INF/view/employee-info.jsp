@@ -16,15 +16,18 @@
     <br>
     <%-- без слеша перед действием!!!  --%>
     <form:form action="saveEmployee" modelAttribute="employee"> <%-- java forms --%>
-        Name <form:input path="name"/>
+
+        <form:hidden path="id"/> <%-- это поле id будет скрытым--%>
+
+        Name <form:input path="name"/> <%-- set значения в поле name--%>
         <br>
-        Surename <form:input path="surename"/>
+        surname <form:input path="surname"/>
         <br>
         Department <form:input path="department"/>
         <br>
         Salary <form:input path="salary"/>
         <br>
-        <input type="submit" name="OK">
+        <input type="submit" name="OK"/>
     </form:form>
 </body>
 </html>

@@ -18,7 +18,7 @@ public class EmployeeServiceImpl implements EmployeeService { //будет по�
     private EmployeeDAO employeeDAO;
 
     @Override
-    @Transactional
+    @Transactional // чтобы не открывать и закрывать транзакцию сомастоятельно
     public List<Employee> getAllEmployees() {
         return employeeDAO.getAllEmployees();
     }
@@ -27,5 +27,11 @@ public class EmployeeServiceImpl implements EmployeeService { //будет по�
     @Transactional
     public void saveEmployee(Employee employee) {
         employeeDAO.saveEmployee(employee);
+    }
+
+    @Override
+    @Transactional
+    public Employee getEmployee(int id) {
+        return employeeDAO.getEmployee(id);
     }
 }

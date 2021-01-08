@@ -5038,7 +5038,7 @@ SELECT|sys.sys_config
       <Position>2</Position>
       <DataType>varchar(15)|0s</DataType>
     </column>
-    <column id="1263" parent="363" name="surename">
+    <column id="1263" parent="363" name="surname">
       <Position>3</Position>
       <DataType>varchar(25)|0s</DataType>
     </column>
