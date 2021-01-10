@@ -1,16 +1,10 @@
-package com.pozhenskii.spring.rest.controller;
+package com.pozhenskii.spring.springboot.springboot_rest.controller;
 
-import com.pozhenskii.spring.rest.entity.Employee;
-import com.pozhenskii.spring.rest.exception_handling.EmployeeIncorrencData;
-import com.pozhenskii.spring.rest.exception_handling.NoSuchEmployeeException;
-import com.pozhenskii.spring.rest.service.EmployeeService;
+import com.pozhenskii.spring.springboot.springboot_rest.entity.Employee;
+import com.pozhenskii.spring.springboot.springboot_rest.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
 import java.util.List;
 
 @RestController //уже не Controller
@@ -31,11 +25,6 @@ public class MyRESTController {
     @GetMapping("/employees/{id}") //вместо Id мы можем поставить что угодно
     public Employee getEmployee(@PathVariable int id) { //получаем занчение из URL
         Employee employee = employeeService.getEmployee(id);
-        if(employee == null) {
-            throw new NoSuchEmployeeException("There is no employee with ID " +
-                     id +
-                    " in Database!");
-        }
         return employee;
     }
 
@@ -54,11 +43,6 @@ public class MyRESTController {
     @DeleteMapping("/employees/{id}") //вместо Id мы можем поставить что угодно
     public String deleteEmployee(@PathVariable int id) { //получаем занчение из URL
         Employee employee = employeeService.getEmployee(id);
-        if (employee == null) {
-            throw new NoSuchEmployeeException("There is no employee with ID = " +
-                    id +
-                    " in Database!");
-        }
 
         employeeService.deleteEmployee(id);
         return "Employee with ID = " + id + " was deleted!";

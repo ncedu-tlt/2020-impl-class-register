@@ -1,6 +1,6 @@
-package com.pozhenskii.spring.rest.service;
+package com.pozhenskii.spring.springboot.springboot_rest.service;
 
-import com.pozhenskii.spring.rest.entity.Employee;
+import com.pozhenskii.spring.springboot.springboot_rest.entity.Employee;
 
 import java.util.List;
 

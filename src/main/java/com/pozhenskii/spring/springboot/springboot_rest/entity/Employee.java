@@ -1,6 +1,4 @@
-package com.pozhenskii.spring.rest.entity;
-
-import org.springframework.beans.factory.annotation.Autowired;
+package com.pozhenskii.spring.springboot.springboot_rest.entity;
 
 import javax.persistence.*;
 

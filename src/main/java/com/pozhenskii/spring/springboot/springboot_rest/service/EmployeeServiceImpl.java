@@ -1,7 +1,7 @@
-package com.pozhenskii.spring.rest.service;
+package com.pozhenskii.spring.springboot.springboot_rest.service;
 
-import com.pozhenskii.spring.rest.dao.EmployeeDAO;
-import com.pozhenskii.spring.rest.entity.Employee;
+import com.pozhenskii.spring.springboot.springboot_rest.dao.EmployeeDAO;
+import com.pozhenskii.spring.springboot.springboot_rest.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
