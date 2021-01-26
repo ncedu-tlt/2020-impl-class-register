@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04503051-0ce9-414f-82f3-1ad2928c9699" name="Default Changelist" comment="To pull request">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/install_tools.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/node.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/node_etw_provider.man" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/nodevars.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/npm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/npm.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/npx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/nodejs/node-v14.15.1-win-x64/npx.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/npm/npm-v6.14.10/npm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/npm/npm-v6.14.10/npm.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/npm/npm-v6.14.10/npm.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/npm/npm-v6.14.10/npx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/npm/npm-v6.14.10/npx.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.gradle/npm/npm-v6.14.10/npx.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/models/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/services/auth-header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/services/auth.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/services/user.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/store/auth.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/views/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/views/BoardAdmin.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/views/BoardModerator.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/views/BoardUser.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/views/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/views/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/views/Profile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/views/Register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/bootJarMainClassName" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/SpringBootSecurityJwtApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/controllers/AuthController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/controllers/TestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/models/ERole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/payload/request/LoginRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/payload/request/SignupRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/payload/response/JwtResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/payload/response/MessageResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/repository/RoleRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/repository/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/security/WebSecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/security/jwt/AuthEntryPointJwt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/security/jwt/AuthTokenFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/security/jwt/JwtUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/security/services/UserDetailsImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/classes/java/main/com/pozhenskii/springjwt/security/services/UserDetailsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/libs/server-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/css/app.c37a77e8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/css/chunk-9c3895e4.09fc8cbf.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/css/chunk-vendors.36a9484c.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/app.dd845a7d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/app.dd845a7d.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/chunk-2d0d7c65.1c470674.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/chunk-2d0d7c65.1c470674.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/chunk-2d0efcba.5caa87e4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/chunk-2d0efcba.5caa87e4.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/chunk-2d20f022.876540f3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/chunk-2d20f022.876540f3.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/chunk-9c3895e4.5913ebc1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/chunk-9c3895e4.5913ebc1.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/chunk-vendors.38a8a250.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/resources/main/static/js/chunk-vendors.38a8a250.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/tmp/bootJar/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/SpringBootSecurityJwtApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/controllers/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/controllers/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/models/ERole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/models/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/payload/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/payload/request/SignupRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/payload/response/JwtResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/payload/response/MessageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/repository/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/jwt/AuthTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/jwt/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/services/UserDetailsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/services/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/FooterComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/HeaderComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ProfileDetailsComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/MainPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/ProfilePage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ncedu_html_css_js.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue-for-students.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nbpECc2FDd0gPsZTIAXwUxWa7b" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Gradle.C:/Users/Oleg/Desktop/spring-class/2020-impl-class-register/build.gradle [stage]">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/Oleg/Desktop/spring-class/2020-impl-class-register/build.gradle [stage]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/build.gradle" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="stage" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SpringBootSecurityJwtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="2020-impl-class-register.server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pozhenskii.springjwt.SpringBootSecurityJwtApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.C:/Users/Oleg/Desktop/spring-class/2020-impl-class-register/build.gradle [stage]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04503051-0ce9-414f-82f3-1ad2928c9699" name="Default Changelist" comment="" />
+      <created>1611668531320</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611668531320</updated>
+      <workItem from="1611668533074" duration="428000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="To pull request" />
+    <option name="LAST_COMMIT_MESSAGE" value="To pull request" />
+  </component>
+</project>
