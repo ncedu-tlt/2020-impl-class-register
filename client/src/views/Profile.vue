@@ -48,11 +48,14 @@ export default {
         this.formData.append("id", JSON.parse(localStorage.getItem('user')).id);
     },
 
+    // rxjs
+    // observable
+    // subscribers
+
     startUpload() {
       let user = JSON.parse(localStorage.getItem('user'));
       axios({
-        // url: 'https://secure-class-app.herokuapp.com/api/test/photo',
-        url: 'http://localhost:8080/api/test/photo',
+        url: '/api/test/photo',
         method: 'POST',
         data: this.formData,
         headers: {
@@ -120,12 +123,12 @@ export default {
 }
 
 .left  {
-  background-color: #b8b8ff;
+  background-color: #7ec2f8;
   width: 25%;
 }
 
 .middle {
-  background-color: #a3a3ff;
+  background-color: #6cb6f0;
   width: 75%;
 }
 

@@ -3,6 +3,11 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Login from './views/Login.vue';
 import Register from './views/Register.vue';
+import Schedule from "@/views/Schedule";
+import HomeWork from "@/views/HomeWork";
+import Billboard from "@/views/Billboard";
+import FindStudent from "@/views/FindStudent";
+import Chat from "@/views/Chat";
 
 Vue.use(Router);
 
@@ -16,6 +21,26 @@ export const router = new Router({
     {
       path: '/home',
       component: Home
+    },
+    {
+      path: '/schedule',
+      component: Schedule
+    },
+    {
+      path: '/homework',
+      component: HomeWork
+    },
+    {
+      path: '/billboard',
+      component: Billboard
+    },
+    {
+      path: '/findStudent',
+      component: FindStudent
+    },
+    {
+      path: '/chat',
+      component: Chat
     },
     {
       path: '/login',
@@ -48,6 +73,36 @@ export const router = new Router({
       name: 'user',
       // lazy-loaded
       component: () => import('./views/BoardUser.vue')
+    },
+    {
+      path: '/schedule',
+      name: 'schedule',
+      // lazy-loaded
+      component: () => import('./views/Schedule.vue')
+    },
+    {
+      path: '/homework',
+      name: 'homework',
+      // lazy-loaded
+      component: () => import('./views/HomeWork.vue')
+    },
+    {
+      path: '/billboard',
+      name: 'billboard',
+      // lazy-loaded
+      component: () => import('./views/Billboard.vue')
+    },
+    {
+      path: '/findStudent',
+      name: 'findStudent',
+      // lazy-loaded
+      component: () => import('./views/FindStudent.vue')
+    },
+    {
+      path: '/chat',
+      name: 'chat',
+      // lazy-loaded
+      component: () => import('./views/Chat.vue')
     }
   ]
 });
