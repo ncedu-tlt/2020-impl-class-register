@@ -22,6 +22,7 @@
             role="alert"
           >Username is required!</div>
         </div>
+
         <div class="form-group">
           <label for="password">Password</label>
           <input
@@ -37,6 +38,9 @@
             role="alert"
           >Password is required!</div>
         </div>
+
+        <router-link :to="'passWord'">Forgot your password?</router-link>
+
         <div class="form-group">
           <button class="btn btn-primary btn-block" :disabled="loading">
             <span v-show="loading" class="spinner-border spinner-border-sm"></span>

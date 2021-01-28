@@ -1,5 +1,6 @@
 package com.netcracker.ncedu.tlt.impl.class_register.payload.response;
 
+import java.util.Date;
 import java.util.List;
 
 public class JwtResponse {
@@ -9,15 +10,23 @@ public class JwtResponse {
 	private String username;
 	private String email;
 	private String photo;
+	private Date date;
+	private String phone;
+	private String address;
 	private List<String> roles;
 
-	public JwtResponse(String accessToken, Long id, String username, String email, String photo, List<String> roles) {
+	public JwtResponse(String accessToken, Long id, String username,
+					   String email, String photo, Date date, String phone,
+					   String address, List<String> roles) {
 		this.token = accessToken;
 		this.id = id;
 		this.username = username;
 		this.email = email;
 		this.photo = photo;
 		this.roles = roles;
+		this.date = date;
+		this.phone = phone;
+		this.address = address;
 	}
 
 	public String getAccessToken() {
@@ -70,5 +79,29 @@ public class JwtResponse {
 
 	public List<String> getRoles() {
 		return roles;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 }

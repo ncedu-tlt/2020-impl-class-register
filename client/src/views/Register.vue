@@ -1,27 +1,30 @@
 <template>
   <div class="col-md-12">
     <div class="card card-container">
-      <img
-        id="profile-img"
-        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-        class="profile-img-card"
-      />
+<!--      <img-->
+<!--        id="profile-img"-->
+<!--        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"-->
+<!--        class="profile-img-card"-->
+<!--      />-->
       <form name="form" @submit.prevent="handleRegister">
         <div v-if="!successful">
+
           <div class="form-group">
             <label for="username">Username</label>
             <input
               v-model="user.username"
-              v-validate="'required|min:3|max:40'"
+              v-validate="'required|min:3|max:14'"
               type="text"
               class="form-control"
               name="username"
+              placeholder="Username"
             />
             <div
               v-if="submitted && errors.has('username')"
               class="alert-danger"
             >{{errors.first('username')}}</div>
           </div>
+
           <div class="form-group">
             <label for="email">Email</label>
             <input
@@ -30,12 +33,14 @@
               type="email"
               class="form-control"
               name="email"
+              placeholder="Email@gmail.com"
             />
             <div
               v-if="submitted && errors.has('email')"
               class="alert-danger"
             >{{errors.first('email')}}</div>
           </div>
+
           <div class="form-group">
             <label for="password">Password</label>
             <input
@@ -44,11 +49,59 @@
               type="password"
               class="form-control"
               name="password"
+              placeholder="Password"
             />
             <div
               v-if="submitted && errors.has('password')"
               class="alert-danger"
             >{{errors.first('password')}}</div>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input
+                type="date"
+                v-model="user.date"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2021-01-01"
+                class="form-control"
+                name="date"
+            />
+            <div
+                v-if="submitted && errors.has('date')"
+                class="alert-danger"
+            >{{errors.first('date')}}</div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+                type="tel"
+                placeholder="89277878489"
+                v-validate="'required|min:11|max:11'"
+                v-model="user.phone"
+                name="phone"
+                pattern="[7-8]{1}[0-9]{3}[0-9]{3}[0-9]{4}"
+                class="form-control"
+                required
+            />
+            <div
+                v-if="submitted && errors.has('phone')"
+                class="alert-danger"
+            >{{errors.first('phone')}}</div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <select class="form-control"  v-model="user.address">
+              <option disabled value="">Выберите один из вариантов</option>
+              <option>Улица Карла-Маркса 32, кв 120</option>
+            </select>
+            <div
+                v-if="submitted && errors.has('address')"
+                class="alert-danger"
+            >{{errors.first('address')}}</div>
           </div>
 
           <div class="form-group">
@@ -73,7 +126,7 @@ export default {
   name: 'Register',
   data() {
     return {
-      user: new User('', '', '', ''),
+      user: new User('', '', '', '', '', ''),
       submitted: false,
       successful: false,
       message: ''
@@ -118,19 +171,21 @@ export default {
 <style scoped>
 label {
   display: block;
-  margin-top: 10px;
 }
 
 .card-container.card {
+  top: 10px;
   max-width: 350px !important;
-  padding: 40px 40px;
+  padding: 20px 20px;
+  line-height: 1;
+  position: center;
 }
 
 .card {
+  line-height: 1;
   background-color: #f7f7f7;
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
-  margin-top: 50px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -138,6 +193,7 @@ label {
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
+
 
 .profile-img-card {
   width: 96px;

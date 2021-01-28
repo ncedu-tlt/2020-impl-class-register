@@ -1,5 +1,8 @@
 package com.netcracker.ncedu.tlt.impl.class_register.models;
 
+import org.springframework.data.annotation.LastModifiedDate;
+
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -33,6 +36,19 @@ public class User {
 	private String password;
 
 	@NotBlank
+	@Size(max = 11)
+	private String phone;
+
+	@Column(nullable = false)
+	@Temporal(TemporalType.DATE)
+	@LastModifiedDate
+	private Date date;
+
+	@NotBlank
+	@Size(max = 40)
+	private String address;
+
+	@NotBlank
 	@Column(columnDefinition="TEXT")
 	private String photo;
 
@@ -45,25 +61,15 @@ public class User {
 	public User() {
 	}
 
-	public User(String username, String email, String password) {
-		this.username = username;
-		this.email = email;
-		this.password = password;
-	}
-
-	public User(String username, String email, String password, String photo) {
+	public User(String username, String email, String password,
+				String photo, Date date, String phone, String address) {
 		this.username = username;
 		this.email = email;
 		this.password = password;
 		this.photo = photo;
-	}
-
-	public User(Long id, String username, String email, String password, String photo) {
-		this.id = id;
-		this.username = username;
-		this.email = email;
-		this.password = password;
-		this.photo = photo;
+		this.date = date;
+		this.phone = phone;
+		this.address = address;
 	}
 
 	public Long getId() {
@@ -112,5 +118,29 @@ public class User {
 
 	public void setPhoto(String photo) {
 		this.photo = photo;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 }

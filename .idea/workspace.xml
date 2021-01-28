@@ -4,42 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04503051-0ce9-414f-82f3-1ad2928c9699" name="Default Changelist" comment="To pull request">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/views/Billboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/views/Chat.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/views/FindStudent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/views/HomeWork.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/views/NavBar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/views/Schedule.vue" afterDir="false" />
+    <list default="true" id="04503051-0ce9-414f-82f3-1ad2928c9699" name="Default Changelist" comment="NavBar as a separate component,&#10;API_URL as a relative path,&#10;package as com.netcracker.ncedu.tlt.impl.class_register;">
+      <change afterPath="$PROJECT_DIR$/client/src/views/PassWord.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/models/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/auth.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/views/Profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Profile.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/SpringBootSecurityJwtApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/SpringBootSecurityJwtApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/controllers/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/models/ERole.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/models/ERole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/models/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/payload/request/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/request/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/payload/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/request/SignupRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/payload/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/response/JwtResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/payload/response/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/response/MessageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/jwt/AuthEntryPointJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/security/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/security/jwt/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/pozhenskii/springjwt/security/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/security/services/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/request/SignupRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/response/JwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/security/services/UserDetailsImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +92,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="JAR Application.server.jar">
@@ -206,7 +186,7 @@
       <workItem from="1611668533074" duration="1361000" />
       <workItem from="1611755086954" duration="3574000" />
       <workItem from="1611764672759" duration="713000" />
-      <workItem from="1611818932834" duration="5159000" />
+      <workItem from="1611818932834" duration="28358000" />
     </task>
     <task id="LOCAL-00001" summary="To pull request">
       <created>1611669077135</created>
@@ -215,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611669077135</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="NavBar as a separate component,&#10;API_URL as a relative path,&#10;package as com.netcracker.ncedu.tlt.impl.class_register;">
+      <created>1611830922998</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611830922998</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +234,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="To pull request" />
-    <option name="LAST_COMMIT_MESSAGE" value="To pull request" />
+    <MESSAGE value="NavBar as a separate component,&#10;API_URL as a relative path,&#10;package as com.netcracker.ncedu.tlt.impl.class_register;" />
+    <option name="LAST_COMMIT_MESSAGE" value="NavBar as a separate component,&#10;API_URL as a relative path,&#10;package as com.netcracker.ncedu.tlt.impl.class_register;" />
   </component>
 </project>

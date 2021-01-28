@@ -1,6 +1,7 @@
 package com.netcracker.ncedu.tlt.impl.class_register.security.services;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -26,10 +27,16 @@ public class UserDetailsImpl implements UserDetails {
 
 	private String photo;
 
+	private Date date;
+
+	private String phone;
+
+	private String address;
+
 	private Collection<? extends GrantedAuthority> authorities;
 
 	public UserDetailsImpl(Long id, String username, String email, String password,
-			String photo,
+			String photo, Date date, String phone, String address,
 			Collection<? extends GrantedAuthority> authorities) {
 		this.id = id;
 		this.username = username;
@@ -37,6 +44,9 @@ public class UserDetailsImpl implements UserDetails {
 		this.password = password;
 		this.authorities = authorities;
 		this.photo = photo;
+		this.date = date;
+		this.phone = phone;
+		this.address = address;
 	}
 
 	public static UserDetailsImpl build(User user) {
@@ -50,6 +60,9 @@ public class UserDetailsImpl implements UserDetails {
 				user.getEmail(),
 				user.getPassword(),
 				user.getPhoto(),
+				user.getDate(),
+				user.getPhone(),
+				user.getAddress(),
 				authorities);
 	}
 
@@ -78,6 +91,18 @@ public class UserDetailsImpl implements UserDetails {
 
 	public String getPhoto() {
 		return photo;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public String getAddress() {
+		return address;
 	}
 
 	@Override

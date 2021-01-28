@@ -14,6 +14,9 @@
           <h2>Student information</h2> <br>
           <p class="v-profile-id">Unique identity: {{currentUser.id}}</p>
           <p class="v-profile-email">Email address: {{currentUser.email}}</p>
+          <p class="v-profile-email">Date: {{currentUser.date}}</p>
+          <p class="v-profile-email">Phone: {{currentUser.phone}}</p>
+          <p class="v-profile-email">Address: {{currentUser.address}}</p>
 
           <form ref="uploadForm"  @submit.prevent="submit">
             <input type="file" ref="uploadImage" @change="onImageUpload()"/>
@@ -89,8 +92,12 @@ export default {
 }
 
 .imgs {
-  height: 180px;
-  width: 180px;
+  border-radius: 100%;
+  width: 100%;
+}
+
+.row {
+  margin-top: 20px;
 }
 
 .left {
@@ -117,9 +124,10 @@ export default {
 
 
 .column {
+  margin-top: 50px;
+  border-radius: 10px;
   float: left;
-  padding: 60px;
-  height: 550px; /* Should be removed. Only for demonstration */
+  padding: 40px;
 }
 
 .left  {
@@ -128,8 +136,9 @@ export default {
 }
 
 .middle {
+  margin-left: 10px;
   background-color: #6cb6f0;
-  width: 75%;
+  width: 73%;
 }
 
 /* Clear floats after the columns */
