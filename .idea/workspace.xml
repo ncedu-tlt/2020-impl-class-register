@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04503051-0ce9-414f-82f3-1ad2928c9699" name="Default Changelist" comment="Add some fio, button, and validation in front-end.&#10;Some changes in css.">
+    <list default="true" id="04503051-0ce9-414f-82f3-1ad2928c9699" name="Default Changelist" comment="asd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/HomeWork.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Homework.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/NavBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/PassWord.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/GetPassword.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,19 +83,6 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="JAR Application.server.jar">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="2020-impl-class-register [stage]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
