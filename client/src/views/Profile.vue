@@ -13,6 +13,7 @@
         <div class="middleText">
           <h2>Student information</h2> <br>
           <p class="v-profile-id">Unique identity: {{currentUser.id}}</p>
+          <p class="v-profile-id">FIO: {{currentUser.fio}}</p>
           <p class="v-profile-email">Email address: {{currentUser.email}}</p>
           <p class="v-profile-email">Date: {{currentUser.date}}</p>
           <p class="v-profile-email">Phone: {{currentUser.phone}}</p>

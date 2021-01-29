@@ -1,13 +1,26 @@
 <template>
   <div class="col-md-12">
     <div class="card card-container">
-<!--      <img-->
-<!--        id="profile-img"-->
-<!--        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"-->
-<!--        class="profile-img-card"-->
-<!--      />-->
+
       <form name="form" @submit.prevent="handleRegister">
         <div v-if="!successful">
+
+          <div class="form-group">
+            <label for="fio">FIO</label>
+            <input
+                v-model="user.fio"
+                v-validate="'required|min:3|max:30'"
+                type="text"
+                class="form-control"
+                name="fio"
+                placeholder="Ivanov Ivan Ivanovich"
+                required
+            />
+            <div
+                v-if="submitted && errors.has('fio')"
+                class="alert-danger"
+            >{{errors.first('fio')}}</div>
+          </div>
 
           <div class="form-group">
             <label for="username">Username</label>
@@ -18,6 +31,7 @@
               class="form-control"
               name="username"
               placeholder="Username"
+              required
             />
             <div
               v-if="submitted && errors.has('username')"
@@ -34,6 +48,7 @@
               class="form-control"
               name="email"
               placeholder="Email@gmail.com"
+              required
             />
             <div
               v-if="submitted && errors.has('email')"
@@ -50,6 +65,7 @@
               class="form-control"
               name="password"
               placeholder="Password"
+              required
             />
             <div
               v-if="submitted && errors.has('password')"
@@ -67,6 +83,7 @@
                 max="2021-01-01"
                 class="form-control"
                 name="date"
+                required
             />
             <div
                 v-if="submitted && errors.has('date')"
@@ -93,10 +110,10 @@
           </div>
 
           <div class="form-group">
-            <label for="address">Address</label>
-            <select class="form-control"  v-model="user.address">
-              <option disabled value="">Выберите один из вариантов</option>
-              <option>Улица Карла-Маркса 32, кв 120</option>
+            <label for="address">School address</label>
+            <select class="form-control" v-model="user.address" required>
+<!--              <option disabled value="Choose one"></option>-->
+              <option defa>Улица Карла-Маркса 32, кв 120</option>
             </select>
             <div
                 v-if="submitted && errors.has('address')"
@@ -176,7 +193,8 @@ label {
 .card-container.card {
   top: 10px;
   max-width: 350px !important;
-  padding: 20px 20px;
+  padding-bottom: 0px;
+  padding-top: 10px;
   line-height: 1;
   position: center;
 }
@@ -185,7 +203,7 @@ label {
   line-height: 1;
   background-color: #f7f7f7;
   padding: 20px 25px 30px;
-  margin: 0 auto 25px;
+  margin: 0 auto;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;

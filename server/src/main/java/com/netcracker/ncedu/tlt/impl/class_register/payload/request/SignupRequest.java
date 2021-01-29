@@ -6,6 +6,11 @@ import java.util.Set;
 import javax.validation.constraints.*;
  
 public class SignupRequest {
+
+    @NotBlank
+    @Size(min = 3, max = 30)
+    private String fio;
+
     @NotBlank
     @Size(min = 3, max = 20)
     private String username;
@@ -85,5 +90,13 @@ public class SignupRequest {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getFio() {
+        return fio;
+    }
+
+    public void setFio(String fio) {
+        this.fio = fio;
     }
 }

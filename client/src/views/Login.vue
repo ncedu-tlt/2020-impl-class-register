@@ -1,11 +1,11 @@
 <template>
   <div class="col-md-12">
     <div class="card card-container">
-      <img
-        id="profile-img"
-        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-        class="profile-img-card"
-      />
+<!--      <img-->
+<!--        id="profile-img"-->
+<!--        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"-->
+<!--        class="profile-img-card"-->
+<!--      />-->
       <form name="form" @submit.prevent="handleLogin">
         <div class="form-group">
           <label for="username">Username</label>
@@ -39,13 +39,14 @@
           >Password is required!</div>
         </div>
 
-        <router-link :to="'passWord'">Forgot your password?</router-link>
+        <router-link class="links" :to="'passWord'">Forgot your password?</router-link>
 
         <div class="form-group">
-          <button class="btn btn-primary btn-block" :disabled="loading">
+          <button class="btn btn-primary btn-block mybtn" :disabled="loading">
             <span v-show="loading" class="spinner-border spinner-border-sm"></span>
             <span>Login</span>
           </button>
+          <router-link to="/register" class="btn btn-primary btn-block mybtn" tag="button">Registration</router-link>
         </div>
         <div class="form-group">
           <div v-if="message" class="alert alert-danger" role="alert">Incorrect login or password</div>
@@ -112,9 +113,13 @@ label {
   margin-top: 10px;
 }
 
+.mybtn {
+  margin-top: 20px;
+}
+
 .card-container.card {
   max-width: 350px !important;
-  padding: 40px 40px;
+  padding: 20px 40px;
 }
 
 .card {
@@ -128,6 +133,11 @@ label {
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.links {
+  color: black;
+  text-align: right;
 }
 
 .profile-img-card {

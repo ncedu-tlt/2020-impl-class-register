@@ -23,6 +23,10 @@ public class User {
 	private Long id;
 
 	@NotBlank
+	@Size(max = 30)
+	private String fio;
+
+	@NotBlank
 	@Size(max = 20)
 	private String username;
 
@@ -61,8 +65,9 @@ public class User {
 	public User() {
 	}
 
-	public User(String username, String email, String password,
+	public User(String fio, String username, String email, String password,
 				String photo, Date date, String phone, String address) {
+		this.fio = fio;
 		this.username = username;
 		this.email = email;
 		this.password = password;
@@ -78,6 +83,14 @@ public class User {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getFio() {
+		return fio;
+	}
+
+	public void setFio(String fio) {
+		this.fio = fio;
 	}
 
 	public String getUsername() {

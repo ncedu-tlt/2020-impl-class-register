@@ -7,6 +7,7 @@ public class JwtResponse {
 	private String token;
 	private String type = "Bearer";
 	private Long id;
+	private String fio;
 	private String username;
 	private String email;
 	private String photo;
@@ -15,11 +16,12 @@ public class JwtResponse {
 	private String address;
 	private List<String> roles;
 
-	public JwtResponse(String accessToken, Long id, String username,
+	public JwtResponse(String accessToken, Long id, String fio, String username,
 					   String email, String photo, Date date, String phone,
 					   String address, List<String> roles) {
 		this.token = accessToken;
 		this.id = id;
+		this.fio = fio;
 		this.username = username;
 		this.email = email;
 		this.photo = photo;
@@ -51,6 +53,14 @@ public class JwtResponse {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getFio() {
+		return fio;
+	}
+
+	public void setFio(String fio) {
+		this.fio = fio;
 	}
 
 	public String getEmail() {
