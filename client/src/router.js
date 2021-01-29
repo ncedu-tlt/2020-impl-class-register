@@ -1,32 +1,103 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import MainPage from "@/views/MainPage";
-import ProfilePage from "@/views/ProfilePage";
+import Home from './views/Home.vue';
+import Login from './views/Login.vue';
+import Register from './views/Register.vue';
 
 Vue.use(Router);
 
-const router = new Router({
-    mode: 'history',
-    base: process.env.BASE_URL,
-    routes: [
-        {
-            path: '/',
-            name: 'main',
-            component: MainPage,
-            meta: {
-                scrollToTopOnLeave: true
-            }
-        },
-
-        {
-            path: '/profile',
-            name: 'profile',
-            component: ProfilePage,
-            meta: {
-                scrollToTopOnLeave: true
-            }
-        }
-    ]
+export const router = new Router({
+  routes: [
+    {
+      path: '/',
+      name: '/home',
+      component: Home
+    },
+    {
+      path: '/home',
+      component: Home
+    },
+    {
+      path: '/login',
+      component: Login
+    },
+    {
+      path: '/register',
+      component: Register
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      // lazy-loaded
+      component: () => import('./views/Profile.vue')
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      // lazy-loaded
+      component: () => import('./views/BoardAdmin.vue')
+    },
+    {
+      path: '/mod',
+      name: 'moderator',
+      // lazy-loaded
+      component: () => import('./views/BoardModerator.vue')
+    },
+    {
+      path: '/user',
+      name: 'user',
+      // lazy-loaded
+      component: () => import('./views/BoardUser.vue')
+    },
+    {
+      path: '/schedule',
+      name: 'schedule',
+      // lazy-loaded
+      component: () => import('./views/Schedule.vue')
+    },
+    {
+      path: '/homework',
+      name: 'homework',
+      // lazy-loaded
+      component: () => import('./views/Homework.vue')
+    },
+    {
+      path: '/billboard',
+      name: 'billboard',
+      // lazy-loaded
+      component: () => import('./views/Billboard.vue')
+    },
+    {
+      path: '/find-student',
+      name: 'findStudent',
+      // lazy-loaded
+      component: () => import('./views/FindStudent.vue')
+    },
+    {
+      path: '/chat',
+      name: 'chat',
+      // lazy-loaded
+      component: () => import('./views/Chat.vue')
+    },
+    {
+      path: '/password',
+      name: 'GetPassword',
+      // lazy-loaded
+      component: () => import('./views/GetPassword.vue')
+    }
+  ]
 });
 
-export default router;
+// router.beforeEach((to, from, next) => {
+//   const publicPages = ['/login', '/register', '/home'];
+//   const authRequired = !publicPages.includes(to.path);
+//   const loggedIn = localStorage.getItem('user');
+//
+//   // trying to access a restricted page + not logged in
+//   // redirect to login page
+//   if (authRequired && !loggedIn) {
+//     next('/login');
+//   } else {
+//     next();
+//   }
+// });

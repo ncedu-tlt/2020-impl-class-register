@@ -1,0 +1,6 @@
+//https://devcenter.heroku.com/articles/deploying-gradle-apps-on-heroku
+task stage(type: Copy, dependsOn: 'server:build') {
+    from project(':server').file('build/libs/server-0.0.1-SNAPSHOT.jar')
+    into rootDir
+    rename { 'server.jar' }
+}
