@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04503051-0ce9-414f-82f3-1ad2928c9699" name="Default Changelist" comment="NavBar as a separate component,&#10;API_URL as a relative path,&#10;package as com.netcracker.ncedu.tlt.impl.class_register;">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="04503051-0ce9-414f-82f3-1ad2928c9699" name="Default Changelist" comment="Add some fio, button, and validation in front-end.&#10;Some changes in css.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/auth.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/HomeWork.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Homework.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Profile.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/request/SignupRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/payload/response/JwtResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/netcracker/ncedu/tlt/impl/class_register/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/NavBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/PassWord.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/GetPassword.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +62,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1nbpECc2FDd0gPsZTIAXwUxWa7b" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -173,6 +166,8 @@
         <item itemvalue="JAR Application.server.jar" />
         <item itemvalue="Gradle.2020-impl-class-register [stage]" />
         <item itemvalue="Gradle.C:/Users/Oleg/Desktop/spring-class/2020-impl-class-register/build.gradle [stage]" />
+        <item itemvalue="JAR Application.server.jar" />
+        <item itemvalue="Gradle.2020-impl-class-register [stage]" />
       </list>
     </recent_temporary>
   </component>
@@ -224,6 +219,12 @@
                       </list>
                     </value>
                   </entry>
+                </map>
+              </option>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="51" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="51" />
                 </map>
               </option>
             </State>

@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <header class="jumbotron">
-      <h3>HomeWork</h3>
+      <h3>Homework</h3>
     </header>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HomeWork"
+  name: "Homework"
 }
 </script>
 

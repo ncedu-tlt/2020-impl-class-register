@@ -31,7 +31,7 @@
           <router-link v-if="currentUser" to="/billboard" class="nav-link">BillBoard</router-link>
         </li>
         <li class="nav-item">
-          <router-link v-if="currentUser" to="/findStudent" class="nav-link">FindStudent</router-link>
+          <router-link v-if="currentUser" to="/find-student" class="nav-link">FindStudent</router-link>
         </li>
         <li class="nav-item">
           <router-link v-if="currentUser" to="/chat" class="nav-link">Chat</router-link>

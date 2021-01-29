@@ -3,12 +3,6 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Login from './views/Login.vue';
 import Register from './views/Register.vue';
-import Schedule from "@/views/Schedule";
-import HomeWork from "@/views/HomeWork";
-import Billboard from "@/views/Billboard";
-import FindStudent from "@/views/FindStudent";
-import Chat from "@/views/Chat";
-import PassWord from "@/views/PassWord";
 
 Vue.use(Router);
 
@@ -22,30 +16,6 @@ export const router = new Router({
     {
       path: '/home',
       component: Home
-    },
-    {
-      path: '/schedule',
-      component: Schedule
-    },
-    {
-      path: '/homework',
-      component: HomeWork
-    },
-    {
-      path: '/billboard',
-      component: Billboard
-    },
-    {
-      path: '/findStudent',
-      component: FindStudent
-    },
-    {
-      path: '/chat',
-      component: Chat
-    },
-    {
-      path: '/passWord',
-      component: PassWord
     },
     {
       path: '/login',
@@ -89,7 +59,7 @@ export const router = new Router({
       path: '/homework',
       name: 'homework',
       // lazy-loaded
-      component: () => import('./views/HomeWork.vue')
+      component: () => import('./views/Homework.vue')
     },
     {
       path: '/billboard',
@@ -98,7 +68,7 @@ export const router = new Router({
       component: () => import('./views/Billboard.vue')
     },
     {
-      path: '/findStudent',
+      path: '/find-student',
       name: 'findStudent',
       // lazy-loaded
       component: () => import('./views/FindStudent.vue')
@@ -110,10 +80,10 @@ export const router = new Router({
       component: () => import('./views/Chat.vue')
     },
     {
-      path: '/passWord',
-      name: 'passWord',
+      path: '/password',
+      name: 'GetPassword',
       // lazy-loaded
-      component: () => import('./views/PassWord.vue')
+      component: () => import('./views/GetPassword.vue')
     }
   ]
 });

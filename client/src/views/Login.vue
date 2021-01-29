@@ -39,7 +39,7 @@
           >Password is required!</div>
         </div>
 
-        <router-link class="links" :to="'passWord'">Forgot your password?</router-link>
+        <router-link class="links" :to="'password'">Forgot your password?</router-link>
 
         <div class="form-group">
           <button class="btn btn-primary btn-block mybtn" :disabled="loading">
