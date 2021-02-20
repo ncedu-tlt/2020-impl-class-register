@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="jumbotron">
-      <h3>Schedule</h3>
+      <h3>Расписание</h3>
     </header>
   </div>
 </template>

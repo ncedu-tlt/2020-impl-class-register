@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="jumbotron">
-      <h3>Homework</h3>
+      <h3>Домашняя работа</h3>
     </header>
   </div>
 </template>

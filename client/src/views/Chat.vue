@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="jumbotron">
-      <h3>Chat</h3>
+      <h3>Чат</h3>
     </header>
   </div>
 </template>

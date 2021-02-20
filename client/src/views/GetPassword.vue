@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="jumbotron">
-      <h3>Get password</h3>
+      <h3>Получить пароль</h3>
     </header>
   </div>
 </template>

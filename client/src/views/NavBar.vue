@@ -8,33 +8,33 @@
 
         <li class="nav-item">
           <router-link to="/home" class="nav-link">
-            <font-awesome-icon icon="home" />Home
+            <font-awesome-icon icon="home" />Домашняя страница
           </router-link>
         </li>
 
         <li v-if="showAdminBoard" class="nav-item">
-          <router-link to="/admin" class="nav-link">Admin Board</router-link>
+          <router-link to="/admin" class="nav-link">Панель админа</router-link>
         </li>
         <li v-if="showModeratorBoard" class="nav-item">
-          <router-link to="/mod" class="nav-link">Moderator Board</router-link>
+          <router-link to="/mod" class="nav-link">Панель модератора</router-link>
         </li>
         <li class="nav-item">
-          <router-link v-if="currentUser" to="/user" class="nav-link">User</router-link>
+          <router-link v-if="currentUser" to="/user" class="nav-link">Для ученика</router-link>
         </li>
         <li class="nav-item">
-          <router-link v-if="currentUser" to="/schedule" class="nav-link">Schedule</router-link>
+          <router-link v-if="currentUser" to="/schedule" class="nav-link">Расписание</router-link>
         </li>
         <li class="nav-item">
-          <router-link v-if="currentUser" to="/homework" class="nav-link">Homework</router-link>
+          <router-link v-if="currentUser" to="/homework" class="nav-link">Домашняя работа</router-link>
         </li>
         <li class="nav-item">
-          <router-link v-if="currentUser" to="/billboard" class="nav-link">BillBoard</router-link>
+          <router-link v-if="currentUser" to="/billboard" class="nav-link">Новости</router-link>
         </li>
         <li class="nav-item">
-          <router-link v-if="currentUser" to="/find-student" class="nav-link">FindStudent</router-link>
+          <router-link v-if="currentUser" to="/find-student" class="nav-link">Поиск по студенту</router-link>
         </li>
         <li class="nav-item">
-          <router-link v-if="currentUser" to="/chat" class="nav-link">Chat</router-link>
+          <router-link v-if="currentUser" to="/chat" class="nav-link">Чат</router-link>
         </li>
 
       </div>
@@ -44,12 +44,12 @@
       <div v-if="!currentUser" class="navbar-nav ml-auto">
         <li class="nav-item">
           <router-link to="/register" class="nav-link">
-            <font-awesome-icon icon="user-plus" />Sign Up
+            <font-awesome-icon icon="user-plus" />Зарегистрироваться
           </router-link>
         </li>
         <li class="nav-item">
           <router-link to="/login" class="nav-link">
-            <font-awesome-icon icon="sign-in-alt" />Login
+            <font-awesome-icon icon="sign-in-alt" />Войти
           </router-link>
         </li>
       </div>
@@ -63,7 +63,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href @click.prevent="logOut">
-            <font-awesome-icon icon="sign-out-alt" />LogOut
+            <font-awesome-icon icon="sign-out-alt" />Выйти
           </a>
         </li>
       </div>

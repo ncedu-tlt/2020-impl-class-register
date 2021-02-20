@@ -3,7 +3,7 @@
 
     <div class="row">
       <div class="column left">
-        <h2>Username: {{currentUser.username}}</h2>
+        <h2>Никнейм: {{currentUser.username}}</h2>
         <img class="imgs" alt="photo.jpg" :src="currentUser.photo"/>
 
 
@@ -11,13 +11,13 @@
 
       <div class="column middle">
         <div class="middleText">
-          <h2>Student information</h2> <br>
-          <p class="v-profile-id">Unique identity: {{currentUser.id}}</p>
-          <p class="v-profile-id">FIO: {{currentUser.fio}}</p>
-          <p class="v-profile-email">Email address: {{currentUser.email}}</p>
-          <p class="v-profile-email">Date: {{currentUser.date}}</p>
-          <p class="v-profile-email">Phone: {{currentUser.phone}}</p>
-          <p class="v-profile-email">Address: {{currentUser.address}}</p>
+          <h2>Информация о аккаунте</h2> <br>
+          <p class="v-profile-id">Уникальный идентификатор: {{currentUser.id}}</p>
+          <p class="v-profile-id">ФИО: {{currentUser.fio}}</p>
+          <p class="v-profile-email">Email адресс: {{currentUser.email}}</p>
+          <p class="v-profile-email">Дата рождения: {{currentUser.date}}</p>
+          <p class="v-profile-email">Телефон: {{currentUser.phone}}</p>
+          <p class="v-profile-email">Адресс: {{currentUser.address}}</p>
 
           <form ref="uploadForm"  @submit.prevent="submit">
             <input type="file" ref="uploadImage" @change="onImageUpload()"/>

@@ -1,14 +1,9 @@
 <template>
   <div class="col-md-12">
     <div class="card card-container">
-<!--      <img-->
-<!--        id="profile-img"-->
-<!--        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"-->
-<!--        class="profile-img-card"-->
-<!--      />-->
       <form name="form" @submit.prevent="handleLogin">
         <div class="form-group">
-          <label for="username">Username</label>
+          <label for="username">Никнэйм</label>
           <input
             v-model="user.username"
             v-validate="'required'"
@@ -20,11 +15,11 @@
             v-if="errors.has('username')"
             class="alert alert-danger"
             role="alert"
-          >Username is required!</div>
+          >Никнэйм является обязательным!</div>
         </div>
 
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password">Пароль</label>
           <input
             v-model="user.password"
             v-validate="'required'"
@@ -36,20 +31,20 @@
             v-if="errors.has('password')"
             class="alert alert-danger"
             role="alert"
-          >Password is required!</div>
+          >Пароль является обязательным!</div>
         </div>
 
-        <router-link class="links" :to="'password'">Forgot your password?</router-link>
+        <router-link class="links" :to="'password'">Забыли пароль?</router-link>
 
         <div class="form-group">
           <button class="btn btn-primary btn-block mybtn" :disabled="loading">
             <span v-show="loading" class="spinner-border spinner-border-sm"></span>
-            <span>Login</span>
+            <span>Войти</span>
           </button>
-          <router-link to="/register" class="btn btn-primary btn-block mybtn" tag="button">Registration</router-link>
+          <router-link to="/register" class="btn btn-primary btn-block mybtn" tag="button">Регистрация</router-link>
         </div>
         <div class="form-group">
-          <div v-if="message" class="alert alert-danger" role="alert">Incorrect login or password</div>
+          <div v-if="message" class="alert alert-danger" role="alert">Неверный пароль или логин</div>
         </div>
       </form>
     </div>

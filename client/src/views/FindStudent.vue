@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="jumbotron">
-      <h3>FindStudent</h3>
+      <h3>Найти студента по ФИО</h3>
     </header>
   </div>
 </template>

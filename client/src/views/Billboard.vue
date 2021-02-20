@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="jumbotron">
-      <h3>Billboard</h3>
+      <h3>Новости</h3>
     </header>
   </div>
 </template>

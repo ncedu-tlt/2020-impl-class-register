@@ -6,7 +6,7 @@
         <div v-if="!successful">
 
           <div class="form-group">
-            <label for="fio">FIO</label>
+            <label for="fio">ФИО</label>
             <input
                 v-model="user.fio"
                 v-validate="'required|min:3|max:30'"
@@ -23,7 +23,7 @@
           </div>
 
           <div class="form-group">
-            <label for="username">Username</label>
+            <label for="username">Никнейм</label>
             <input
               v-model="user.username"
               v-validate="'required|min:3|max:14'"
@@ -40,7 +40,7 @@
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Мэил</label>
             <input
               v-model="user.email"
               v-validate="'required|email|max:50'"
@@ -57,7 +57,7 @@
           </div>
 
           <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password">Пароль</label>
             <input
               v-model="user.password"
               v-validate="'required|min:6|max:40'"
@@ -74,7 +74,7 @@
           </div>
 
           <div class="form-group">
-            <label for="date">Date</label>
+            <label for="date">Дата рождения</label>
             <input
                 type="date"
                 v-model="user.date"
@@ -92,7 +92,7 @@
           </div>
 
           <div class="form-group">
-            <label for="phone">Phone</label>
+            <label for="phone">Телефон</label>
             <input
                 type="tel"
                 placeholder="89277878489"
@@ -110,9 +110,8 @@
           </div>
 
           <div class="form-group">
-            <label for="address">School address</label>
+            <label for="address">Адресс школы</label>
             <select class="form-control" v-model="user.address" required>
-<!--              <option disabled value="Choose one"></option>-->
               <option defa>Улица Карла-Маркса 32, кв 120</option>
             </select>
             <div
@@ -122,7 +121,7 @@
           </div>
 
           <div class="form-group">
-            <button class="btn btn-primary btn-block">Sign Up</button>
+            <button class="btn btn-primary btn-block">Зарегистрироваться</button>
           </div>
         </div>
       </form>
